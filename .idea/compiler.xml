@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Tasca_S5_02" />
+        <module name="S05T02N01SanmiguelalonsoGonzalo" />
+        <module name="S05T02N01SanmiguelalonsoGonzalo-Monger" />
+        <module name="S05T02N01SanmiguelalonsoGonzalo-Double-Persistence" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="S05T02N01SanmiguelalonsoGonzalo" options="-parameters" />
+      <module name="S05T02N01SanmiguelalonsoGonzalo-Double-Persistence" options="-parameters" />
+      <module name="S05T02N01SanmiguelalonsoGonzalo-Monger" options="-parameters" />
+      <module name="Tasca_S5_02" options="-parameters" />
+    </option>
+  </component>
+</project>

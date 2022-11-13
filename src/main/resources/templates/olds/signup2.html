@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Sign up / Login Form</title>
+    <link rel="stylesheet" th:href="@{/css/style-signup.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" th:href="@{/css/material-design-iconic-font.min.css}">
+    <link rel="stylesheet" th:href="@{/css/materialize.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Slide Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="signup" th:object="${playerModel}">>
+        <form id="signup_form" method="POST">
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <div style="padding: 0px; height: 10px;">
+                <span id="response_signup" class="form-title"
+                      style="float: right; color: red;padding-right: 18%;">
+                </span>
+            </div>
+            <input id="signup_user" type="text" th:field="*{namePlayer}" placeholder="User name" required=""
+                   onblur="checkingSignUp('signup_user','signup_btn','response_signup','signup_form')">
+            <button id="signup_btn" type="submit">Sign up</button>
+        </form>
+    </div>
+<!--
+    <div class="login">
+        <form id="signin_form" method="POST">
+            <label for="chk" aria-hidden="true">Login</label>
+            <div style="padding: 0px; height: 10px;">
+						<span id="response_signin" class="form-title"
+                              style="float: right; color: red;padding-right: 18%;"></span>
+            </div>
+            <input id="signin_user" type="text" th:field="*{namePlayer}" placeholder="User name" tabindex="-1"
+                   required=""
+                   onblur="checkingSignUp('signin_user','signin_btn','response_signin','signin_form')">
+            <button id="signin_btn" tabindex="-1">Login</button>
+        </form>
+    </div>-->
+</div>
+</body>
+<!-- parial -->
+
+<script>
+    var list = [[${playerModel.usersRegistred}]];
+    document.getElementById("response_signup").innerText = "";
+</script>
+<script type="text/javascript" th:src="@{/js/sign-in-dice.js}"></script>
+</html>

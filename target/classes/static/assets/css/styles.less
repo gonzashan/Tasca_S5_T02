@@ -1,0 +1,62 @@
+/*
+
+ Your Stylesheet (~/.atom/styles.less)
+
+ The settings below are meant for larger screens view
+ in atom editor, tabs, tree-view, and settings.
+
+ Adjust according to personal preference.
+
+
+*/
+
+@ui-font-size: 14px;
+
+// thicker cursor
+.editor .cursor {
+  border-left-width: 2px;
+}
+
+// smaller font-size in Settings
+.settings-view {
+  font-size: @ui-font-size;
+}
+
+.overlay .select-list ol.list-group li,
+.overlay.select-list ol.list-group li {
+  font-size: @ui-font-size;
+}
+
+.status-bar {
+  font-size: @ui-font-size;
+  height: @ui-font-size * 2;
+  line-height: @ui-font-size * 2 - 4;
+}
+
+.tab-bar .tab, .tab-bar .tab.active {
+  font-size: @ui-font-size;
+  //height: @ui-font-size * 2;
+}
+
+// comfortable tree-view
+.tree-view {
+  font-size: @ui-font-size - 1px;
+  .list-item {
+    line-height: @ui-font-size * 2 !important;
+  }
+  .header {
+    font-size: @ui-font-size;
+  }
+  .selected:before, .selected:before {
+    height: @ui-font-size * 2 !important;
+  }
+  .icon:before {
+    font-size: @ui-font-size;
+    width: @ui-font-size;
+    height: @ui-font-size;
+  }
+  .header:before {
+    font-size: @ui-font-size !important;
+    margin-right: 2px !important;
+  }
+}
